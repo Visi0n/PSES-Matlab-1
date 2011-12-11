@@ -1,4 +1,4 @@
-%% ASKHSH 3
+%%% ASKHSH 3
 %% Erwthma a)
 clear all;
 close all;

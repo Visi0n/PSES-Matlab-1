@@ -3,7 +3,7 @@
 %% Erwthma a)
 clear all;
 n=[1:40];
-x=randperm(length(n));
+x=sin(n);
  N=length(n);
 
  
@@ -14,7 +14,7 @@ X1(n+1)=x(n+1).*exp(-j*2*pi*n*k/N);
 end
 X(k+1)=sum(X1);
 end
-X;
+
 n=1:40;%%Xronos pou orizetai to shma
 figure(1);
 subplot(2,1,1)
@@ -43,7 +43,7 @@ stem(n,X,'filled')
          X1(n+1)=sum(Xn1);
  end
  for i=0:N-1
- X1(i+1)=X1(i+1)/N;
+ X2(i+1)=X1(i+1)/N;
  end
    
    n=1:40;
@@ -55,7 +55,7 @@ stem(n,X,'filled')
  ylabel('x[n]');
 
 subplot(2,1,2);
- stem(n,X1,'filled')
+ stem(n,X2,'filled')
   title('Arxiko shma x[n] epeita apo anastrofo metasxhmatismo Fourier');
  xlabel('n');
  ylabel('F^-1(x[n])');
